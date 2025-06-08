@@ -29,7 +29,13 @@ const authRegister=async(req,res)=>{
         const token =await user.getJWT();
 
         // Now add the token to cookei and send response back to the server
-        res.cookie("token",token,{expires:new Date(Date.now()+9000000000)});
+        res.cookie("token",token, 
+          {
+  httpOnly: true,
+  secure: true,              // Required for HTTPS
+  sameSite: 'None',          // Allows cross-site cookies
+},
+            {expires:new Date(Date.now()+9000000000)});
 
         // Sending response back
         res.send(user);
