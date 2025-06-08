@@ -1,4 +1,4 @@
-const CartSchema = require("../models/cart");
+const CartSchema = require("../models/Cart");
 
 const cartUpdateM=async(req,res)=>{
     try{

@@ -1,4 +1,4 @@
-const WishListSchema = require("../models/wishList");
+const WishListSchema = require("../models/WishList");
 
 const deletewishList = async (req,res) => {
   try {
