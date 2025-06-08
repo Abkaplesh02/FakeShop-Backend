@@ -11,7 +11,7 @@ const app=express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin:"https://fakeshopmern.netlify.app/",
+    origin:"https://fakeshopmern.netlify.app",
     credentials:true,
 }))
 
